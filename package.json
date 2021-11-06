@@ -1,0 +1,44 @@
+{
+  "name": "@agilie-blogs/admin-panel",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@tinymce/tinymce-react": "^3.13.0",
+    "prop-types": "^15.6.0",
+    "ra-core": "^3.19.0",
+    "react": "^17.0.2",
+    "ra-ui-materialui": "^3.19.0",
+    "react-admin": "^3.19.0",
+    "react-final-form": "^6.5.7"
+  },
+  "scripts": {
+    "start:dev": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/prop-types": "^15.6.0",
+    "rimraf": "^2.6.3",
+    "typescript": "^4.4.4"
+  }
+}
