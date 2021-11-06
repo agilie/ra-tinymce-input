@@ -1,10 +1,8 @@
 import { ComponentProps } from 'react';
 import { useInput } from 'ra-core';
 import { InputHelperText } from 'ra-ui-materialui';
-import {
-    PropTypes as MuiPropTypes,
-} from '@material-ui/core';
-import PropTypes from 'prop-types';
+import { PropTypes as MuiPropTypes, } from '@material-ui/core';
+import * as PropTypes from 'prop-types';
 import { Editor } from '@tinymce/tinymce-react';
 
 export interface RichTextInputProps {
@@ -42,9 +40,9 @@ export const RichTextInput = (props: RichTextInputProps) => {
     const {
         id,
         isRequired,
-        input: { value , onChange },
-        meta: { touched, error },
-    } = useInput({ source, ...rest });
+        input: {value, onChange},
+        meta: {touched, error},
+    } = useInput({source, ...rest});
 
     return (
         <>
@@ -56,7 +54,8 @@ export const RichTextInput = (props: RichTextInputProps) => {
                     toolbar: toolbar,
                     content_style: content_style,
                 }}
-                onInit={(evt, editor) => {}}
+                onInit={(evt, editor) => {
+                }}
                 onEditorChange={(newValue, editor) => {
                     onChange(newValue)
                 }}
