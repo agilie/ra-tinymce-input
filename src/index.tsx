@@ -34,7 +34,7 @@ export const RichTextInput = (props: RichTextInputProps) => {
         initialValue,
         disabled = false,
         cloudChannel = '5-stable',
-        apikey = 'c3qq8pm65834hbfehad1ewk7ofgkvm1mmhg41vpruadnn5w3',
+        apikey,
         ...rest
     } = props;
     const {
