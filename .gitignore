@@ -1,4 +1,8 @@
 node_modules
 
+# Logs
 *.log
 
+# Compiled outputs
+esm
+lib

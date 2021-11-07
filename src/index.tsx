@@ -1,4 +1,4 @@
-import { ComponentProps } from 'react';
+import React, { ComponentProps } from 'react';
 import { useInput } from 'ra-core';
 import { InputHelperText } from 'ra-ui-materialui';
 import { PropTypes as MuiPropTypes, } from '@material-ui/core';
@@ -77,6 +77,5 @@ RichTextInput.propTypes = {
     options: PropTypes.object,
     source: PropTypes.string,
     fullWidth: PropTypes.bool,
-    configureQuill: PropTypes.func,
 };
 

@@ -1,7 +1,36 @@
 {
-  "name": "@agilie-blogs/admin-panel",
+  "name": "@agilie/ra-tinymce-input",
   "version": "0.1.0",
-  "private": true,
+  "description": "Rich Text Input component for React Admin, useful for editing HTML content in admin GUI",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "private": false,
+  "sideEffects": false,
+  "scripts": {
+    "build": "npm run build-cjs && npm run build-esm",
+    "build:cjs": "rimraf ./lib && tsc",
+    "build:esm": "rimraf ./esm && tsc --outDir esm --module es2015"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agilie/ra-tinymce-input"
+  },
+  "keywords": [
+    "reactjs",
+    "react",
+    "react-admin",
+    "richtext",
+    "html",
+    "wysiwyg",
+    "editor",
+    "tinymce"
+  ],
+  "author": "Agilie Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/agilie/ra-tinymce-input/issues"
+  },
+  "homepage": "https://github.com/agilie/ra-tinymce-input#readme",
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@tinymce/tinymce-react": "^3.13.0",
@@ -11,12 +40,6 @@
     "ra-ui-materialui": "^3.19.0",
     "react-admin": "^3.19.0",
     "react-final-form": "^6.5.7"
-  },
-  "scripts": {
-    "start:dev": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
