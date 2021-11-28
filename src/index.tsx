@@ -21,6 +21,7 @@ export interface RichTextInputProps {
 export const RichTextInput = (props: RichTextInputProps) => {
     const {
         toolbar = false,
+        toolbar_mode,
         menubar = false,
         fullWidth = true,
         label,
@@ -34,6 +35,7 @@ export const RichTextInput = (props: RichTextInputProps) => {
         initialValue,
         disabled = false,
         cloudChannel = '5-stable',
+        images_upload_url,
         apikey,
         ...rest
     } = props;
@@ -52,6 +54,8 @@ export const RichTextInput = (props: RichTextInputProps) => {
                     menubar: menubar,
                     plugins: plugins,
                     toolbar: toolbar,
+                    toolbar_mode,
+                    images_upload_url,
                     content_style: content_style,
                 }}
                 onInit={(evt, editor) => {
