@@ -22,7 +22,22 @@ export const PostCreate = (props) => (
     <Create {...props}>
         <SimpleForm>
             <TextInput source="title"/>
-            <RichTextInput source="body" toolbar={true}/>
+            <RichTextInput source="body"
+                           initialValue="<p>This is the initial content of the editor.</p>"
+                           init={{
+                               height: 500,
+                               menubar: false,
+                               plugins: [
+                                   'advlist autolink lists link image charmap print preview anchor',
+                                   'searchreplace visualblocks code fullscreen',
+                                   'insertdatetime media table paste code help wordcount'
+                               ],
+                               toolbar: 'undo redo | formatselect | ' +
+                                   'bold italic backcolor | alignleft aligncenter ' +
+                                   'alignright alignjustify | bullist numlist outdent indent | ' +
+                                   'removeformat | help',
+                               content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+                           }} />
             <DateInput label="Publication date" source="published_at" defaultValue={new Date()}/>
         </SimpleForm>
     </Create>
@@ -32,24 +47,10 @@ export const PostCreate = (props) => (
 You can customize the rich text editor by adding additional attributes, as described on the
 TinyMCE [official documentation][TinyMCE docs].
 
-```javascript
-<RichTextInput
-    images_upload_url={`${process.env.REACT_APP_API_HOST}/api/images`}
-    toolbar_mode="wrap"
-
-    plugins={['autoresize print preview importcss searchreplace autolink autosave save directionality visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern noneditable help charmap quickbars emoticons']}
-    menubar="file edit view insert format tools table tc help"
-    toolbar="undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist checklist | forecolor backcolor casechange permanentpen formatpainter removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media template link anchor codesample | a11ycheck ltr rtl | showcomments addcomment"
-
-    source={source}
-    apikey={"long api key here"}
-/>
-```
-
 # Roadmap
 
 1. ~~Basic implementation of React Admin rich text editor on the basis of TinyMCE editor~~
-2. Map all the original properties of TinyMCE editor to the react admin component
+2. ~~Map all the original properties of TinyMCE editor to the react admin component~~
 3. Map all the react admin input properties to an editor and implement the correspondent behavior
 4. Codestyle, tests, correct proptypes
 
